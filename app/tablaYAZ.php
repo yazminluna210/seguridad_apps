@@ -8,5 +8,5 @@ class tablaYAZ extends Model
 {
     protected $primarykey="id";
     public $timestamps=false;
-    protected $table = "tablaYAZ";
+    protected $table = "tablayaz";
 }
