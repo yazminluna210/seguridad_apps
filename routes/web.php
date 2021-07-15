@@ -13,4 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [\App\Http\Controllers\Controller::class, 'rutaYAZ']);
+//Route::get('/', [\App\Http\Controllers\Controller::class, 'rutaYAZ']);
+
+
+Route::get('/', function(){
+    return view("welcome");
+});
