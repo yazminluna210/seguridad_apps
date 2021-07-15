@@ -14,6 +14,17 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
         public function rutaYAZ(){
-                return json_encode(DB::select('select * from tablaYAZ;'));
+                return json_encode(tablaYAZ::all());
+        }
+
+        public function add(Request $R){
+                $yazmin = new tablaYAZ();
+                $yazmin->nombre = $R->nombre;
+                $yazmin->apellido = $R->apellido;
+                $yazmin->id = $R->id;
+                $yazmin->origen = $_SERVER["SERVER_ADDR"];
+                $yazmin->save();
+
+                return tablaYAZ::all();
         }
 }

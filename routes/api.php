@@ -20,3 +20,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 
 Route::get('/', [\App\Http\Controllers\Controller::class, 'rutaYAZ']);
+
+Route::post('/add',[\App\Http\Controllers\Controller::class,'add']);
